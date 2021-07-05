@@ -92,7 +92,7 @@ public class Conv {
 
          */
         //Задача 5.два массива найти среднее и вычислить большее
-       /* int[] numb = new int[5];
+       /*int[] numb = new int[5];
         int[] numb1 = new int[5];
         Random random = new Random();
         for (int i = 0; i < numb.length; i++) {
@@ -100,25 +100,27 @@ public class Conv {
             System.out.print(numb[i] + " ");
         }
         System.out.println();
-        for (int i = 0; i < numb.length; i++) {
+        for (int i = 0; i < numb1.length; i++) {
             numb1[i] = random.nextInt(15);
             System.out.print(numb1[i] + " ");
         }
         double average = 0;
         double average1 = 0;
         for (int i = 0; i < numb.length; i++) {
-            average += numb[i];
-            average1 += numb1[i];
+            average = average + numb[i] / numb.length;
+            average1 = average1 + numb1[i] / numb1.length;
         }
         System.out.println();
         if (average < average1)
-            System.out.println("Среднее арифмитическое первого массива больше второго");
-        else if (average > average1)
             System.out.println("Среднее арифмитическое первого массива меньше второго");
+        else if (average > average1)
+            System.out.println("Среднее арифмитическое первого массива больше второго");
         else if (average == average1)
             System.out.println("Среднее арифмитическое первого массива равно второму");
 
         */
+
+
         //Задача 6.является ли массив возрастающим
        /* int[] numb = new int[4];
         Random random = new Random();
@@ -285,10 +287,121 @@ public class Conv {
         */
 
 
-        //
+        // Найти наименьший нечетный элемент
+       /* int[] mas = {4,5,2,4,9,55,9,56,54,2,5,7};
+        int min = mas[0];
+        for (int i = 0; i < mas.length; i++) {
+            if (mas[i] % 2 ==1) {
+                if (min > mas[i] || min%2!=1) {
+                    min = mas[i];
+                }
+            }
+        }
+        System.out.print(min);
 
+        */
+
+
+        //Найти средне арифметическое элементов массива, превосходящих некоторое
+        //число С.
+       /* System.out.print("Введите число: ");
+        Scanner sc = new Scanner(System.in);
+        int c = sc.nextInt();
+        int[] mas = new int[10];
+        double sum = 0;
+        double k = 0;
+        double sred = 0;
+        Random random = new Random();
+        for (int i = 0; i < mas.length; i++) {
+            mas[i] = random.nextInt(10);
+            System.out.print(mas[i] + " ");
+            if (mas[i] > c) {
+                sum += mas[i];
+                k++;
+                sred = sum / k;
+            }
+        }
+        System.out.println();
+        System.out.print(sred + " ");
+
+        */
+        //) Подсчитать, сколько раз встречается элемент с заданным значением.
+       /* System.out.print("Введите число: ");
+        Scanner sc = new Scanner(System.in);
+        int c = sc.nextInt();
+        int[] mas = new int[10];
+        int n = 0;
+        Random random = new Random();
+        for (int i = 0; i < mas.length; i++) {
+            mas[i] = random.nextInt(10);
+            System.out.print(mas[i] + " ");
+            if (mas[i] == c) {
+                n++;
+
+            }
+        }
+        System.out.println();
+        System.out.print("Число " + c + " повторяется " + n + " раз");
+
+        */
+        // Найти второй по величине (т.е. следующий по величине за максимальным)
+        //элемент в массиве.
+       /* int[] mas = new int[10];
+        int max1 = mas[0];
+        int max2 = mas[1];
+        Random random = new Random();
+        for (int i = 0; i < mas.length; i++) {
+            mas[i] = random.nextInt(10);
+            System.out.print(mas[i] + " ");
+            if (mas[i] > max1) {
+                max2 = max1;
+                max1 = mas[i];
+            } else if (mas[i] > max2) {
+                max2 = mas[i];
+            }
+        }
+        System.out.println();
+        System.out.println(max1);
+        System.out.println(max2);
+
+        */
+        // Найти наименьший элемент среди элементов с четными индексами массива
+        /*int[] mas = {3,21,5,64,3,77,1,2,28,5};
+        int j = 0;
+        int min = mas[0];
+        for (int i = 0; i < mas.length; i = i + 2) {
+            if (i % 2 == 0) {
+                mas[j] = mas[i];
+                if (min > mas[j]) {
+                    min = mas[j];
+                }
+            }
+        }
+        System.out.println(min);
+
+         */
+        //  Найти максимальный элемент в массиве и поменять его местами с нулевым
+        //элементом
+        /*int[] mas = {2,5,11,86,2,4,5,5,5,12};
+        int j = 0;
+        int max = mas[0];
+        for (int i = 0; i < mas.length; i++) {
+            if (max < mas[i]) {
+                max = mas[i];
+            }
+        }
+        j = max;
+        max = mas[0];
+        mas[0] = j;
+        System.out.println(mas[0]);
+        System.out.println(max);
+
+         */
     }
 }
+
+
+
 
 
 
